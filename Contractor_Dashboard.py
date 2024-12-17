@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 # Set the title of the web page with the logo beside it
 col1, col2 = st.columns([1, 10])
@@ -15,7 +16,7 @@ power_bi_html = """
             allowFullScreen="true"></iframe>
 </div>
 """
-st.markdown(power_bi_html, unsafe_allow_html=True)
+components.html(power_bi_html, height=800)
 
 # Add a full-screen button
 full_screen_button = """
