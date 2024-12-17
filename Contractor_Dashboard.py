@@ -3,16 +3,20 @@ import streamlit as st
 # Set the title of the web page with the logo beside it
 col1, col2 = st.columns([1, 10])
 with col1:
-    st.image("NATGAS.png", width=100)
+    st.image("NATGAS.PNG", width=100)
 with col2:
     st.title("NATGAS Contractors Monthly Dashboard")
 
 # Embed the Power BI dashboard using the provided HTML embed code
 power_bi_html = """
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-    <iframe title="Report Section" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"
-            src="https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100"
-            frameborder="0" allowFullScreen="true"></iframe>
+    <div style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
+        <div style="width: 100%; height: 100%;">
+            <iframe title="Report Section" style="width: 100%; height: 100%; border: none;"
+                    src="https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100"
+                    allowFullScreen="true"></iframe>
+        </div>
+    </div>
 </div>
 """
 st.markdown(power_bi_html, unsafe_allow_html=True)
