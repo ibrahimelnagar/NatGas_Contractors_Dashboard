@@ -11,9 +11,21 @@ with col2:
 # Embed the Power BI dashboard using the provided HTML embed code
 power_bi_html = """
 <div style="width: 100%; height: 800px;">
-    <iframe id="powerBIFrame" title="Report Section" style="width: 100%; height: 100%; border: none;"
-            src="https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100"
-            allowFullScreen="true"></iframe>
+    <div id="powerBIFrame" style="width: 100%; height: 100%;">
+        <script type="text/javascript">
+            window.onload = function () {
+                var embedContainer = document.getElementById('powerBIFrame');
+                var embedUrl = 'https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100';
+                var iframe = document.createElement('iframe');
+                iframe.src = embedUrl;
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.border = 'none';
+                iframe.allowFullscreen = true;
+                embedContainer.appendChild(iframe);
+            }
+        </script>
+    </div>
 </div>
 """
 components.html(power_bi_html, height=800)
@@ -23,7 +35,7 @@ full_screen_button = """
 <button onclick="openFullscreen();">Full Screen</button>
 <script>
 function openFullscreen() {
-  var elem = document.getElementById('powerBIFrame');
+  var elem = document.querySelector('iframe');
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) { // Firefox
