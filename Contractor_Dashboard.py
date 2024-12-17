@@ -15,7 +15,7 @@ st.markdown("""
 
 # Embed the Power BI dashboard with a placeholder URL
 power_bi_url = "https://www.example.com"  # Replace with your actual Power BI dashboard URL
-st.markdown(f'<iframe width="100%" height="800" src="{power_bi_url}" frameborder="0" allowFullScreen="true"></iframe>', unsafe_allow_html=True)
+st.markdown(f'<iframe title="Contractors Analysis - Draft" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100" frameborder="0" allowFullScreen="true"></iframe>', unsafe_allow_html=True)
 
 
 
