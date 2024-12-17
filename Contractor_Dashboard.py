@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 # Set the title of the web page with the logo beside it
 col1, col2 = st.columns([1, 10])
@@ -9,7 +8,12 @@ with col2:
     st.title("NATGAS Contractors Monthly Dashboard")
 
 # Embed the Power BI dashboard using the provided HTML embed code
-components.ifram("https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100")
+power_bi_html = """
+<div>
+    <iframe title="Report Section" width="100%" height="800" src="https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100" frameborder="0" allowFullScreen="true"></iframe>
+</div>
+"""
+st.markdown(power_bi_html, unsafe_allow_html=True)
 
 # Add credit for the dashboard creator
 st.markdown("""
