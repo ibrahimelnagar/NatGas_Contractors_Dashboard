@@ -9,46 +9,7 @@ with col2:
     st.title("NATGAS Contractors Monthly Dashboard")
 
 # Embed the Power BI dashboard using the provided HTML embed code
-power_bi_html = """
-<div style="width: 100%; height: 800px;">
-    <div id="powerBIFrame" style="width: 100%; height: 100%;">
-        <script type="text/javascript">
-            window.onload = function () {
-                var embedContainer = document.getElementById('powerBIFrame');
-                var embedUrl = 'https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100';
-                var iframe = document.createElement('iframe');
-                iframe.src = embedUrl;
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-                iframe.style.border = 'none';
-                iframe.allowFullscreen = true;
-                embedContainer.appendChild(iframe);
-            }
-        </script>
-    </div>
-</div>
-"""
-components.html(power_bi_html, height=800)
-
-# Add a full-screen button
-full_screen_button = """
-<button onclick="openFullscreen();">Full Screen</button>
-<script>
-function openFullscreen() {
-  var elem = document.querySelector('iframe');
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { // Firefox
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { // IE/Edge
-    elem.msRequestFullscreen();
-  }
-}
-</script>
-"""
-st.markdown(full_screen_button, unsafe_allow_html=True)
+components.ifram("https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100")
 
 # Add credit for the dashboard creator
 st.markdown("""
