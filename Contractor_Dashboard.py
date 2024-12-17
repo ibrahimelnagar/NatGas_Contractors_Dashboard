@@ -18,23 +18,24 @@ power_bi_html = """
 st.markdown(power_bi_html, unsafe_allow_html=True)
 
 # Add a full-screen button
-st.markdown("""
-    <button onclick="openFullscreen();">Full Screen</button>
-    <script>
-    function openFullscreen() {
-      var elem = document.querySelector('iframe');
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.mozRequestFullScreen) { // Firefox
-        elem.mozRequestFullScreen();
-      } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) { // IE/Edge
-        elem.msRequestFullscreen();
-      }
-    }
-    </script>
-    """, unsafe_allow_html=True)
+full_screen_button = """
+<button onclick="openFullscreen();">Full Screen</button>
+<script>
+function openFullscreen() {
+  var elem = document.querySelector('iframe');
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { // Firefox
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { // IE/Edge
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+"""
+st.markdown(full_screen_button, unsafe_allow_html=True)
 
 # Add credit for the dashboard creator
 st.markdown("""
@@ -48,4 +49,13 @@ st.markdown(
     """
     <style>
     .main .block-container{{
-        max-width: 1
+        max-width: 100%;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
