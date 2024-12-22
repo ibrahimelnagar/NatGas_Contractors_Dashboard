@@ -24,29 +24,11 @@ looker_studio_html = """
 """
 st.markdown(looker_studio_html, unsafe_allow_html=True)
 
-# Add a button for users to toggle full-screen mode
-full_screen_button = """
-<div style="text-align: right; margin-top: 10px;">
-    <button onclick="toggleFullScreen()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-        Full Screen
-    </button>
-</div>
-<script>
-function toggleFullScreen() {
-    var iframe = document.getElementById("dashboardFrame");
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) { /* Firefox */
-        iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-        iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) { /* IE/Edge */
-        iframe.msRequestFullscreen();
-    }
-}
-</script>
-"""
-st.markdown(full_screen_button, unsafe_allow_html=True)
+# Display a warning message about cookies
+st.warning("If the dashboard does not load, please enable third-party cookies in your browser.")
+
+# Provide a direct link to the dashboard
+st.markdown("[Click here to view the dashboard directly](https://lookerstudio.google.com/reporting/54ea8915-7b41-4e0a-8ed2-2f00c48cfd77/page/flEaE)")
 
 # Add credit for the dashboard creator with improved styling
 st.markdown("""
