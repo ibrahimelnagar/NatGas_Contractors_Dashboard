@@ -13,13 +13,7 @@ with col2:
 # Embed the Google Looker Studio dashboard with an iframe, styled for responsiveness
 looker_studio_html = """
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe id="dashboardFrame"
-            title="Google Looker Studio Dashboard"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-            src="https://lookerstudio.google.com/embed/reporting/54ea8915-7b41-4e0a-8ed2-2f00c48cfd77/page/flEaE"
-            frameborder="0"
-            allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-    </iframe>
+    <iframe width="600" height="338" src="https://lookerstudio.google.com/embed/reporting/54ea8915-7b41-4e0a-8ed2-2f00c48cfd77/page/flEaE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 </div>
 """
 st.markdown(looker_studio_html, unsafe_allow_html=True)
