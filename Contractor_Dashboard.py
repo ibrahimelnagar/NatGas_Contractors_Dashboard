@@ -10,19 +10,19 @@ with col1:
 with col2:
     st.title("NATGAS Contractors Monthly Dashboard")
 
-# Embed the Power BI dashboard with an iframe, styled for responsiveness
-power_bi_html = """
+# Embed the Google Looker Studio dashboard with an iframe, styled for responsiveness
+looker_studio_html = """
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe id="dashboardFrame"
-            title="Report Section"
+            title="Google Looker Studio Dashboard"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-            src="https://app.powerbi.com/reportEmbed?reportId=91071687-dcbb-433a-a3a3-159775676fce&autoAuth=true&ctid=a86ca211-c918-4c77-8b32-440c27aa3100"
+            src="https://lookerstudio.google.com/embed/reporting/54ea8915-7b41-4e0a-8ed2-2f00c48cfd77/page/flEaE"
             frameborder="0"
-            allowfullscreen>
+            allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
     </iframe>
 </div>
 """
-st.markdown(power_bi_html, unsafe_allow_html=True)
+st.markdown(looker_studio_html, unsafe_allow_html=True)
 
 # Add a button for users to toggle full-screen mode
 full_screen_button = """
