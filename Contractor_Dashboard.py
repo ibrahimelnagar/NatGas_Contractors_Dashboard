@@ -18,7 +18,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 # Embed the updated Looker Studio dashboard with improved sizing
 looker_studio_html = """
-<div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
+<div style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden;">
     <iframe id="dashboardFrame"
             title="Google Looker Studio Dashboard"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
