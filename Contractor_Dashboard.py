@@ -10,6 +10,12 @@ with col1:
 with col2:
     st.title("NATGAS Contractors Monthly Dashboard")
 
+# Add credit for the dashboard creator with improved styling
+st.markdown("""
+    <div style='text-align: right; margin-top: 20px; font-size: 14px; color: #555;'>
+        <p><strong>Created by:</strong> Ibrahim Elnagar, Operation Manager</p>
+    </div>
+    """, unsafe_allow_html=True)
 # Embed the updated Looker Studio dashboard with improved sizing
 looker_studio_html = """
 <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
@@ -29,13 +35,6 @@ st.warning("If the dashboard does not load, please enable third-party cookies in
 
 # Provide a direct link to the dashboard
 st.markdown("[Click here to view the dashboard directly](https://lookerstudio.google.com/reporting/54ea8915-7b41-4e0a-8ed2-2f00c48cfd77/page/flEaE)")
-
-# Add credit for the dashboard creator with improved styling
-st.markdown("""
-    <div style='text-align: right; margin-top: 20px; font-size: 14px; color: #555;'>
-        <p><strong>Created by:</strong> Ibrahim Elnagar, Operation Manager</p>
-    </div>
-    """, unsafe_allow_html=True)
 
 # Styling to ensure the dashboard fits the page width
 st.markdown("""
