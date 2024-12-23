@@ -10,30 +10,6 @@ with col1:
 with col2:
     st.title("NATGAS Contractors Monthly Dashboard")
 
-# Add a fullscreen button at the top of the page
-full_screen_button = """
-<div style="text-align: right; margin-bottom: 10px;">
-    <button onclick="toggleFullScreen()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-        Full Screen
-    </button>
-</div>
-<script>
-function toggleFullScreen() {
-    var iframe = document.getElementById("dashboardFrame");
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) { /* Firefox */
-        iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-        iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) { /* IE/Edge */
-        iframe.msRequestFullscreen();
-    }
-}
-</script>
-"""
-st.markdown(full_screen_button, unsafe_allow_html=True)
-
 # Embed the updated Looker Studio dashboard with improved sizing
 looker_studio_html = """
 <div style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden;">
