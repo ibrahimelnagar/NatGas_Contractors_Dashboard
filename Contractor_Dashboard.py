@@ -22,7 +22,7 @@ looker_studio_html = """
     <iframe id="dashboardFrame"
             title="Google Looker Studio Dashboard"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-            src="https://lookerstudio.google.com/embed/reporting/54ea8915-7b41-4e0a-8ed2-2f00c48cfd77/page/flEaE"
+            src="https://lookerstudio.google.com/embed/reporting/54ea8915-7b41-4e0a-8ed2-2f00c48cfd77/page/p_azuu9apzod"
             frameborder="0"
             allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
     </iframe>
